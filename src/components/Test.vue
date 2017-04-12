@@ -46,7 +46,8 @@
       <h3>表单</h3>
       <input v-model="msg" placeholder="请输入">
       <p>Message is: {{ msg }}</p>
-      <textarea v-if="seen" v-model="msg" placeholder="add multiple lines"></textarea>
+      <textarea v-if="seen" v-model="msg" placeholder="input 更新"></textarea>
+      <textarea v-if="seen" v-model.lazy="msg" placeholder="懒更新"></textarea>
       <input id="checkbox1" type="checkbox" v-model="seen">
       <label for="checkbox1">{{seen?'可见':'有些元素被隐藏了'}}</label>
       <div>
@@ -64,6 +65,13 @@
           <li v-bind:style="{display:'block',border:'1px solid',margin:'2px'}" v-for="item in checkedItems">{{item}}</li>
         </ul>
       </div>
+    </div>
+    <div>
+      <h3>组件</h3>
+      <component-example></component-example>
+      <c1></c1>
+      <c1></c1>
+      <c1></c1>
     </div>
   </div>
 </template>
