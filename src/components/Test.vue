@@ -70,8 +70,7 @@
       <h3>组件</h3>
       <component-example></component-example>
       <c1></c1>
-      <c1></c1>
-      <c1></c1>
+      <child1 message='我是来自 test.vue 的 prop 数据'></child1>
     </div>
   </div>
 </template>
